@@ -13,9 +13,6 @@
     <link href="styles/styles.css" type="text/css" rel="stylesheet">
     <link href="styles/components.css" type="text/css" rel="stylesheet">
 
-    <!--Photo by <a href="https://unsplash.com/@lordmaui?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Benson</a> on <a href="https://unsplash.com/photos/man-sitting-leaning-on-door-glass-xLNFxwWGPMk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  -->
-
 </head>
 <body>
     <header class="header">
@@ -26,11 +23,21 @@
             VENIA
         </div>
         <ul class="menu">
-            <li class="active">Home</li>
-            <li>Women</li>
-            <li>Men</li>
-            <li>Smart Gear</li>
-            <li>Accessories</li>
+            <li class="active">
+                <a href="index.html">Products</a>
+            </li>
+            <li>
+                <a href="women-page.html">Women</a>
+            </li>
+            <li>
+                <a href="men-page.html">Men</a>
+            </li>
+            <li>
+                <a href="jewellery-page.html">Jewellery</a>
+            </li>
+            <li>
+                <a href="accessories.html">Accessories</a>
+            </li>
         </ul>
         <div class="cart">
 
@@ -40,6 +47,25 @@
     <section id="sidebar" class="sidebar">
         <p class="sidebar-heading">Filters</p>
         <section class="sidebar-content">
+
+            <ul class="menu">
+                <li class="active">
+                    <a href="index.html">Products</a>
+                </li>
+                <li>
+                    <a href="women-page.html">Women</a>
+                </li>
+                <li>
+                    <a href="men-page.html">Men</a>
+                </li>
+                <li>
+                    <a href="jewellery-page.html">Jewellery</a>
+                </li>
+                <li>
+                    <a href="accessories.html">Accessories</a>
+                </li>
+            </ul>
+
             <h4>Category</h4>
             <form id="category-form-mob">
                 <ul class="category-filter">
@@ -182,9 +208,55 @@
                 </div>
             </div>
         </section>
-        `
     </main>
 
+    <footer>
+        <section class="venia-footer">
+            <div class="footer-section">
+                <h6>Account</h6>
+                <ul>
+                    <li>Sign In</li>
+                    <li>Register</li>
+                    <li>Order Status</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h6>About Us</h6>
+                <ul>
+                    <li>Our Story</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h6>Help</h6>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>Order Status</li>
+                    <li>Returns</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h6>Follow Us</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            </div>
+        </section>
+
+        <div class="copyright">
+            <div class="logo">
+                VENIA
+            </div>
+            <div class="address">
+                © Company Name Address Ave, City Name, State ZIP
+            </div>
+            <div class="privacy">
+                <span>Terms of User</span>
+                <span>Privacy Policty</span>
+            </div>
+        </div>
+    </footer>
 
     <script src="scripts/config.js"></script>
     <script src="scripts/sorting.js"></script>
@@ -193,5 +265,10 @@
     <script src="scripts/search.js"></script>
     <script src="scripts/sidebar.js"></script>
     <script src="scripts/products.js"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', async ()=>{
+        await fetchProducts(APP_STORE.lazy_loading_limit);
+      });
+    </script>
 </body>
 </html>

@@ -28,11 +28,6 @@ async function fetchProductsByCategory(category) {
   }
 }
 
-
-document.addEventListener('DOMContentLoaded', async ()=>{
-  await fetchProducts(APP_STORE.lazy_loading_limit);
-});
-
 function renderProductList(productList) {
    const productListContainer = document.getElementById('product-list');
    productListContainer.innerHTML = '';

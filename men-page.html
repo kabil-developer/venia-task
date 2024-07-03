@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Venia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="styles/components.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<header class="header">
+    <div id="sidebar-control" class="sidebar-control">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="logo">
+        VENIA
+    </div>
+    <ul class="menu">
+        <li>
+            <a href="index.html">Products</a>
+        </li>
+        <li>
+            <a href="women-page.html">Women</a>
+        </li>
+        <li class="active">
+            <a href="men-page.html">Men</a>
+        </li>
+        <li>
+            <a href="jewellery-page.html">Jewellery</a>
+        </li>
+        <li>
+            <a href="accessories.html">Accessories</a>
+        </li>
+    </ul>
+    <div class="cart">
+
+    </div>
+</header>
+
+<section id="sidebar" class="sidebar">
+    <p class="sidebar-heading">Filters</p>
+    <section class="sidebar-content">
+
+        <ul class="menu">
+            <li>
+                <a href="index.html">Products</a>
+            </li>
+            <li>
+                <a href="women-page.html">Women</a>
+            </li>
+            <li class="active">
+                <a href="men-page.html">Men</a>
+            </li>
+            <li>
+                <a href="jewellery-page.html">Jewellery</a>
+            </li>
+            <li>
+                <a href="accessories.html">Accessories</a>
+            </li>
+        </ul>
+
+        <h4>Category</h4>
+
+        <select id="venia-sort-products-mob" class="venia-dropdown">
+            <option value="nil"> No Sorting </option>
+            <option value="price">Sort By Price</option>
+            <option value="rating">Sort By Rating</option>
+        </select>
+
+        <button id="show-results-button" class="venia-button">
+            <p>
+                Show
+                <span class="result-count" id="result-count"></span>
+            </p>
+        </button>
+
+    </section>
+
+</section>
+
+<section class="mobile-banner">
+    <img src="assets/men-banner.jpg"  />
+    <div class="banner-category">
+        <div class="banner-category-text">
+            <h3>
+                Men's <br/> Outerwear
+            </h3>
+        </div>
+    </div>
+</section>
+
+<section class="banner">
+    <div class="left">
+        <div class="banner-category">
+            <h3>
+                Men's <br/> Outerwear
+            </h3>
+        </div>
+    </div>
+    <div class="right">
+        <img src="assets/men-banner.jpg"  />
+    </div>
+</section>
+
+<main class="app-container">
+
+    <section class="top-filter">
+        <div class="left">
+            <p>Clothing / Outwear / Men</p>
+        </div>
+        <div class="right">
+            <p class="result-count"></p>
+            <div>
+                <input id="venia-product-search" placeholder="Search" class="venia-search" type="search">
+
+                <select id="venia-sort-products" class="venia-dropdown">
+                    <option value="nil"> No Sorting </option>
+                    <option value="price">Sort By Price</option>
+                    <option value="rating">Sort By Rating</option>
+                </select>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="product-container">
+        <div class="filter">
+
+        </div>
+        <div class="product-list-wrapper">
+            <div id="product-list" class="product-grid">
+                <!--Container for product list-->
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <section class="venia-footer">
+        <div class="footer-section">
+            <h6>Account</h6>
+            <ul>
+                <li>Sign In</li>
+                <li>Register</li>
+                <li>Order Status</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h6>About Us</h6>
+            <ul>
+                <li>Our Story</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h6>Help</h6>
+            <ul>
+                <li>Contact Us</li>
+                <li>Order Status</li>
+                <li>Returns</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h6>Follow Us</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <div class="logo">
+            VENIA
+        </div>
+        <div class="address">
+            © Company Name Address Ave, City Name, State ZIP
+        </div>
+        <div class="privacy">
+            <span>Terms of User</span>
+            <span>Privacy Policty</span>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts/config.js"></script>
+<script src="scripts/sorting.js"></script>
+<script src="scripts/search.js"></script>
+<script src="scripts/sidebar.js"></script>
+<script src="scripts/products.js"></script>
+<script src="scripts/men-prod-data-loader.js"></script>
+<script type="text/javascript">
+</script>
+</body>
+</html>
