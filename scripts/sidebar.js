@@ -2,11 +2,6 @@
 
 const sidebar = document.getElementById('sidebar');
 
-/*const hamburgerButton = document.getElementById("sidebar-control");
-hamburgerButton.addEventListener('click', ()=>{
-  closeSideBar();
-});*/
-
 document.addEventListener('click', (event)=>{
   const sidebar = document.getElementById('sidebar');
   const sidebarControl = document.getElementById('sidebar-control');
