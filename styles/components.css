@@ -1,0 +1,26 @@
+.venia-dropdown {
+    border: 2px solid #B5B7BC;
+    border-radius: 8px;
+    padding: 8px 4px;
+}
+
+.venia-search {
+    border: 2px solid #B5B7BC;
+    border-radius: 8px;
+    padding: 9px 4px;
+}
+
+.venia-button {
+    padding: 10px 20px;
+    background-color: #1363DF;
+    outline: none;
+    border: none;
+    color:  #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.venia-button.lg {
+    font-size: 18px;
+    padding: 14px 28px;
+}

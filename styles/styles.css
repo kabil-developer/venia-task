@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.header {
+    background-color: #1363DF;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 56px;
+}
+
+.header .menu {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    column-gap: 10px;
+}
+
+.header .menu li {
+    padding: 0 16px;
+    display: flex;
+    height: 90%;
+    cursor: pointer;
+    align-items: center;
+}
+
+.header .menu li.active {
+    border-bottom: 2px solid white;
+}
+
+.app-container {
+    padding: 0 10%;
+}
+
+.banner {
+    height: 352px;
+    display: flex;
+    align-items: center;
+}
+
+.banner .left {
+    height: 100%;
+    width: 30%;
+    background-color: #1B252C;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .left .banner-category {
+    position: relative;
+}
+
+.banner .left .banner-category:after {
+    content: '';
+    width: 40%;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    border-top: 4px solid #1363DF;
+    padding-bottom: 48px;
+    margin-top: 20px;
+}
+
+.banner .left .banner-category h3 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.banner .right {
+    width: 70%;
+    height: 90%;
+}
+
+.banner .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-banner {
+    display: none;
+}
+
+.top-filter {
+    height: 120px;
+    display: flex;
+    background-color: white;
+    position: relative;
+}
+
+.top-filter .left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.top-filter .right {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.product-container {
+    display: flex;
+}
+
+.product-container .filter {
+    width: 30%;
+    padding-right: 50px;
+}
+
+.product-container .filter .filter-heading {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid #D1D3D6;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.product-container .filter .filter-sub-heading {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.product-list-wrapper {
+    width: 70%;
+}
+
+.product-list-wrapper .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.product-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-grid .product {
+    background-color: white;
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+.product-grid .product img {
+    width: 100%;
+    object-fit: contain;
+    height: 382px;
+    margin-bottom: 16px;
+}
+
+
+/*.product-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative; !* Ensure positioning context for shimmer *!
+}
+
+.product-grid .product {
+    background-color: white;
+    padding: 16px;
+    border: 1px solid #ccc;
+    position: relative; !* Required for shimmer positioning *!
+    overflow: hidden; !* Hide shimmer overflow *!
+}
+
+.product-grid .product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear; !* Adjust timing as needed *!
+}*/
+
+
+.product-grid .product-shimmer {
+    padding: 16px;
+    /*border: 1px solid #ccc;*/
+    height: 488px;
+    background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+.product-grid .product .title {
+    width: 100%;
+    font-weight: bold;
+}
+
+.product-grid .product .price {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.filter .category-filter, .sidebar .category-filter {
+    list-style: none;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #D1D3D6;
+}
+
+.filter .category-filter li, .sidebar .category-filter li {
+    margin-bottom: 10px;
+}
+
+
+.sidebar-control {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+}
+
+.sidebar-heading {
+    line-height: 48px;
+    padding-left: 12px;
+    height: 48px;
+    background-color: #efefef;
+    border-bottom: 1px solid lightgray;
+}
+
+
+/* Mobile version */
+
+
+/*--====== 01) XXL Devices ======--*/
+@media (min-width: 1600px) {
+
+}
+
+
+/*--====== 02) XL Devices ======--*/
+@media (max-width: 1399.98px) {
+
+    /*--- Common Styles ---*/
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+/*--====== 03) Lg Devices ======--*/
+@media (max-width: 1199.98px) {
+
+    /*--- Common Styles ---*/
+    .container {
+        max-width: 960px;
+    }
+
+}
+
+
+/*--====== 04) Md Devices ======--*/
+@media (max-width: 991.98px) {
+    /*--- Common Styles ---*/
+
+    html {
+        font-size: 16px;
+    }
+
+    .app-container {
+        padding: 0 2%;
+    }
+
+    .header {
+        width: 100%;
+        top: 0;
+        position: sticky;
+        height: 48px;
+        padding: 0 24px;
+        z-index: 10;
+    }
+
+    .header .menu {
+        display: none;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+        width: 100%;
+        height: 193px;
+        position: relative;
+    }
+
+    .mobile-banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .mobile-banner .banner-category {
+        position: relative;
+        top: -80px;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-banner .banner-category .banner-category-text {
+        background-color: #1B252C;
+        color: white;
+        font-size: 32px;
+        width: 90%;
+        height: 159px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .product-container .filter {
+        display: none;
+    }
+
+    .product-list-wrapper {
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .product-grid .product img {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 16px;
+    }
+
+    .product-grid .product .title {
+        font-size: 0.85rem;
+        padding-bottom: 2px;
+    }
+
+    .product-grid .product {
+        padding: 8px;
+    }
+
+    .top-filter {
+        margin-top: 120px;
+        flex-direction: column;
+    }
+
+    .top-filter .right, .top-filter .left {
+        width: 100%;
+    }
+
+    .sidebar {
+        display: block;
+        width: 70vw;
+        height: 100vh;
+        position: fixed;
+        background-color: white;
+        z-index: 10;
+        top: 0;
+        right: -100%;
+        transition: right 0.5s ease-out;
+    }
+
+    .sidebar.opened {
+        right: 0;
+    }
+
+    .sidebar-control {
+        display: block;
+    }
+
+    .sidebar-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    #venia-sort-products {
+        display: none;
+    }
+
+}
+
+
+/*--====== 05) Sm Devices ======--*/
+@media (max-width: 767.98px) {
+
+    /*--- Common Styles ---*/
+    .container {
+        max-width: 540px;
+    }
+}
+
+
+/*--====== 06) Xs Devices ======--*/
+@media (max-width: 575.98px) {
+
+    .app-container {
+        padding: 0 4%;
+    }
+
+
+}
